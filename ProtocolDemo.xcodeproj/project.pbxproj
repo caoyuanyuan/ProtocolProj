@@ -31,6 +31,9 @@
 		61456DFC279FDD9A003E06D6 /* TextHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61456DFB279FDD9A003E06D6 /* TextHeader.swift */; };
 		61456DFE279FDDDC003E06D6 /* BaseSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61456DFD279FDDDC003E06D6 /* BaseSectionHeader.swift */; };
 		61456E00279FF57A003E06D6 /* TextHeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61456DFF279FF57A003E06D6 /* TextHeaderData.swift */; };
+		61456E0327A0E2B6003E06D6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61456E0227A0E2B6003E06D6 /* InfoView.swift */; };
+		61456E0527A0E2C5003E06D6 /* InfoViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61456E0427A0E2C5003E06D6 /* InfoViewProtocol.swift */; };
+		61456E0727A0E554003E06D6 /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61456E0627A0E553003E06D6 /* InfoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		61456DFB279FDD9A003E06D6 /* TextHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHeader.swift; sourceTree = "<group>"; };
 		61456DFD279FDDDC003E06D6 /* BaseSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSectionHeader.swift; sourceTree = "<group>"; };
 		61456DFF279FF57A003E06D6 /* TextHeaderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHeaderData.swift; sourceTree = "<group>"; };
+		61456E0227A0E2B6003E06D6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		61456E0427A0E2C5003E06D6 /* InfoViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewProtocol.swift; sourceTree = "<group>"; };
+		61456E0627A0E553003E06D6 /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +151,8 @@
 				61456DE8279E9FD4003E06D6 /* BaseTotalModel.swift */,
 				61456DF3279F9FA6003E06D6 /* CellTemplate.swift */,
 				61456DFD279FDDDC003E06D6 /* BaseSectionHeader.swift */,
-				61456DEC279F98ED003E06D6 /* Text */,
+				61456E0127A0E1C1003E06D6 /* DisplayView2 */,
+				61456DEC279F98ED003E06D6 /* DisplayView1 */,
 				61456DF5279FA3FF003E06D6 /* Macro.swift */,
 			);
 			path = ProtocolDemo;
@@ -168,7 +175,7 @@
 			path = ProtocolDemoUITests;
 			sourceTree = "<group>";
 		};
-		61456DEC279F98ED003E06D6 /* Text */ = {
+		61456DEC279F98ED003E06D6 /* DisplayView1 */ = {
 			isa = PBXGroup;
 			children = (
 				61456DED279F9913003E06D6 /* TextView.swift */,
@@ -177,7 +184,7 @@
 				61456DFB279FDD9A003E06D6 /* TextHeader.swift */,
 				61456DFF279FF57A003E06D6 /* TextHeaderData.swift */,
 			);
-			path = Text;
+			path = DisplayView1;
 			sourceTree = "<group>";
 		};
 		61456DF7279FD3D8003E06D6 /* Extension */ = {
@@ -186,6 +193,16 @@
 				61456DF8279FD3FB003E06D6 /* UIViewExt.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		61456E0127A0E1C1003E06D6 /* DisplayView2 */ = {
+			isa = PBXGroup;
+			children = (
+				61456E0227A0E2B6003E06D6 /* InfoView.swift */,
+				61456E0427A0E2C5003E06D6 /* InfoViewProtocol.swift */,
+				61456E0627A0E553003E06D6 /* InfoModel.swift */,
+			);
+			path = DisplayView2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,9 +342,12 @@
 				61456D99279A8B0E003E06D6 /* ViewController.swift in Sources */,
 				61456DF6279FA3FF003E06D6 /* Macro.swift in Sources */,
 				61456D95279A8B0E003E06D6 /* AppDelegate.swift in Sources */,
+				61456E0327A0E2B6003E06D6 /* InfoView.swift in Sources */,
 				61456DCF279AA3B3003E06D6 /* BaseView.swift in Sources */,
 				61456E00279FF57A003E06D6 /* TextHeaderData.swift in Sources */,
 				61456DE1279E747F003E06D6 /* BaseSectionProtocol.swift in Sources */,
+				61456E0527A0E2C5003E06D6 /* InfoViewProtocol.swift in Sources */,
+				61456E0727A0E554003E06D6 /* InfoModel.swift in Sources */,
 				61456DEE279F9913003E06D6 /* TextView.swift in Sources */,
 				61456DFC279FDD9A003E06D6 /* TextHeader.swift in Sources */,
 				61456DF2279F9938003E06D6 /* TextDataModel.swift in Sources */,

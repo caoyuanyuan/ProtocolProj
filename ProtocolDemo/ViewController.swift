@@ -74,11 +74,11 @@ extension ViewController {
         guard ((sectionModel.sectionProtocol?.headerViewClass()) != nil) else { return UIView() }
         var baseHeader: BaseSectionHeader!
         if let reuseId = sectionModel.templateID, totalModel.cacheHeaders.keys.contains(reuseId) {
-            baseHeader = totalModel.cacheHeaders[reuseId]
+            baseHeader = totalModel.cacheHeaders[reuseId + "_\(section)"]
         } else {
             baseHeader = BaseSectionHeader.init(height: CGFloat(totalModel.headerHeight(section: section)), sectionModel: sectionModel)
             baseHeader.bindData(with: sectionModel.headerData!)
-            totalModel.cacheHeaders[sectionModel.templateID!] = baseHeader
+            totalModel.cacheHeaders[sectionModel.templateID! + "_\(section)"] = baseHeader
         }
         return baseHeader
     }

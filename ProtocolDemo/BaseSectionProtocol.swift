@@ -19,11 +19,11 @@ protocol BaseSectionProtocol {
     
     /// 获取cell 唯一标识
     /// - Returns: id
-    func cellReuseIdentifier(sectionModel: BaseSectionModel, indexPath:IndexPath) -> String
+    func cellReuseIdentifier(sectionModel: BaseSectionModel, at indexPath:IndexPath) -> String
     
     /// cell 行高
     /// - Returns: 行高
-    func cellHeight(sectionModel: BaseSectionModel, indexPath:IndexPath) -> Float
+    func cellHeight(sectionModel: BaseSectionModel, at indexPath:IndexPath) -> Float
     
     /// row个数
     /// - Returns: 个数
@@ -31,7 +31,7 @@ protocol BaseSectionProtocol {
     
     /// 获取index对应数据
     /// - Returns: model
-    func getRowData(sectionModel: BaseSectionModel, indexPath:IndexPath) -> BaseModel?
+    func getRowData(sectionModel: BaseSectionModel, at indexPath:IndexPath) -> BaseModel?
     
     //MARK: - header
     /// header对应类名
@@ -40,27 +40,27 @@ protocol BaseSectionProtocol {
     
     /// header高度
     /// - Returns: h
-    func headerHeight(sectionModel: BaseSectionModel, section: Int) -> Float
+    func headerHeight(sectionModel: BaseSectionModel, in section: Int) -> Float
 }
 
 extension BaseSectionProtocol {
     func cellDisplayViewClass() -> AnyClass? {
         return nil
     }
-    
+
     func cellDisplayViewClassDict() -> [String : AnyClass?] {
         return ["" : nil]
     }
-    
-    func getRowData(sectionModel: BaseSectionModel, indexPath: IndexPath) -> BaseModel? {
+
+    func getRowData(sectionModel: BaseSectionModel, at indexPath: IndexPath) -> BaseModel? {
         return sectionModel
     }
-    
+
     func headerViewClass() -> AnyClass? {
         return nil
     }
-    
-    func headerHeight(sectionModel: BaseSectionModel, section: Int) -> Float {
+
+    func headerHeight(sectionModel: BaseSectionModel, in section: Int) -> Float {
         return 0.0
     }
 }

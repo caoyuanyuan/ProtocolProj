@@ -23,7 +23,6 @@ class BaseTableViewCell: UITableViewCell {
     
     private func layout(reuseId: String?, cellHeight: CGFloat, sectionModel: BaseSectionModel) {
         let frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: cellHeight)
-        
         guard let reuseIdentifier = reuseId else { return }
         
         if let cls = sectionModel.sectionProtocol?.cellDisplayViewClass() {

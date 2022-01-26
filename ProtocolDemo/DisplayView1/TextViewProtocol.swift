@@ -12,11 +12,11 @@ class TextViewProtocol: BaseSectionProtocol {
         return TextView.self
     }
     
-    func cellReuseIdentifier(sectionModel: BaseSectionModel, indexPath: IndexPath) -> String {
+    func cellReuseIdentifier(sectionModel: BaseSectionModel, at indexPath: IndexPath) -> String {
         return sectionModel.templateID ?? ""
     }
     
-    func cellHeight(sectionModel: BaseSectionModel, indexPath: IndexPath) -> Float {
+    func cellHeight(sectionModel: BaseSectionModel, at indexPath: IndexPath) -> Float {
         return 54.0
     }
     
@@ -24,7 +24,7 @@ class TextViewProtocol: BaseSectionProtocol {
         return sectionModel.rowList?.count ?? 0
     }
     
-    func getRowData(sectionModel: BaseSectionModel, indexPath:IndexPath) -> BaseModel? {
+    func getRowData(sectionModel: BaseSectionModel, at indexPath:IndexPath) -> BaseModel? {
         return sectionModel.rowList?[indexPath.row]
     }
     
@@ -32,7 +32,7 @@ class TextViewProtocol: BaseSectionProtocol {
         return TextHeader.self
     }
     
-    func headerHeight(sectionModel: BaseSectionModel, section: Int) -> Float {
+    func headerHeight(sectionModel: BaseSectionModel, in section: Int) -> Float {
         return 60.0
     }
 }

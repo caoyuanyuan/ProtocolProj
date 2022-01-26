@@ -8,9 +8,9 @@
 import Foundation
 
 class TextHeaderData: BaseModel {
-    var title: String = ""
+    var title: String? = ""
     
-    init(title: String) {
+    init(title: String?) {
         self.title = title
     }
 }

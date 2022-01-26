@@ -14,6 +14,11 @@ class BaseTotalModel: BaseModel {
 
 extension BaseTotalModel {
     func syncData() {
+        loadTextData()
+        loadInfoData()
+    }
+    
+    private func loadTextData() {
         let sectionModel = BaseSectionModel()
         sectionModel.templateID = kCellReuseIdText
         var arr: [TextDataModel] = []
@@ -24,7 +29,21 @@ extension BaseTotalModel {
             arr.append(data)
         }
         sectionModel.rowList = arr
-        sectionModel.headerData = TextHeaderData(title: "头部标题")
+        sectionModel.headerData = TextHeaderData(title: "Text头部标题")
+        sectionModel.bindSectionProtocol()
+        sectionList.append(sectionModel)
+    }
+    
+    private func loadInfoData() {
+        let sectionModel = BaseSectionModel()
+        sectionModel.templateID = kCellReuseIdInfo
+        var arr: [InfoModel] = []
+        for i in 1 ... 10 {
+            let data = InfoModel(title: "用户-\(i)", detail: "自我介绍一下子--\(i)")
+            arr.append(data)
+        }
+        sectionModel.rowList = arr
+        sectionModel.headerData = TextHeaderData(title: "Info头部标题")
         sectionModel.bindSectionProtocol()
         sectionList.append(sectionModel)
     }
@@ -37,7 +56,7 @@ extension BaseTotalModel {
     /// - Returns: cellId
     func cellReuseIdentifier(with indexPath: IndexPath) -> String {
         let sectionModel = sectionList[indexPath.section]
-        if let id = sectionModel.sectionProtocol?.cellReuseIdentifier(sectionModel: sectionModel, indexPath: indexPath) {
+        if let id = sectionModel.sectionProtocol?.cellReuseIdentifier(sectionModel: sectionModel, at: indexPath) {
             return id
         }
         return ""
@@ -48,7 +67,7 @@ extension BaseTotalModel {
     /// - Returns: cell高度
     func cellHeight(with indexPath: IndexPath) -> Float {
         let sectionModel = sectionList[indexPath.section]
-        if let h = sectionModel.sectionProtocol?.cellHeight(sectionModel: sectionModel, indexPath: indexPath) {
+        if let h = sectionModel.sectionProtocol?.cellHeight(sectionModel: sectionModel, at: indexPath) {
             return h
         }
         return 0.0
@@ -70,12 +89,12 @@ extension BaseTotalModel {
     /// - Returns: 模型数据
     func getRowData(with indexPath: IndexPath) -> BaseModel? {
         let sectionModel = sectionList[indexPath.section]
-        return sectionModel.sectionProtocol?.getRowData(sectionModel: sectionModel, indexPath: indexPath)
+        return sectionModel.sectionProtocol?.getRowData(sectionModel: sectionModel, at: indexPath)
     }
     
     func headerHeight(section: Int) -> Float {
         let sectionModel = sectionList[section]
-        return sectionModel.sectionProtocol?.headerHeight(sectionModel: sectionModel, section: section) ?? 0.0
+        return sectionModel.sectionProtocol?.headerHeight(sectionModel: sectionModel, in: section) ?? 0.0
     }
     
 }

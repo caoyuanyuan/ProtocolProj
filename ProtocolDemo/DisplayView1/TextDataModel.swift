@@ -8,6 +8,6 @@
 import Foundation
 
 class TextDataModel: BaseModel {
-    var title: String = ""
-    var subTitle: String = ""
+    var title: String? = ""
+    var subTitle: String? = ""
 }
